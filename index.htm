@@ -2,6 +2,15 @@
 <html>
 	<head>
 		<title>RDF/XML Parser</title>
+		<style>
+			label {
+			display: inline-block;
+			width: 12em;
+			}
+			.toplabel {
+			font-weight: bold;
+			}
+		</style>
 		<script>
 			function parseRDF(rdfXml) {
 				// Neues JavaScript-Objekt zum Speichern der Daten
@@ -18,24 +27,26 @@
 				for (var i = 0; i < individuals.length; i++) {
 					var individual = individuals[i];
 					
-					// "rdf:about"-Attribut für den individuellen Schlüssel verwenden
-					var key = individual.getAttribute("rdf:about");
+					
 					
 					// Neues Objekt für den aktuellen Schlüssel erstellen
-					var obj = {};
+					
 					
 					// Alle "schema:ingredients"-Elemente auswählen
-					var ingredients = individual.getElementsByTagName("schema:ingredients");
+					// var ingredients = individual.getElementsByTagName("schema:ingredients");
 					
 					// Durch jedes "schema:ingredients"-Element iterieren
-					for (var j = 0; j < ingredients.length; j++) {
-						var ingredient = ingredients[j];
+					// for (var j = 0; j < ingredients.length; j++) {
+						var obj = {};
+						// "rdf:about"-Attribut für den individuellen Schlüssel verwenden
+						var key = individual.getAttribute("rdf:about");
+						// var ingredient = ingredients[j];
 						// "rdfs:label" und "schema:value" auswählen
-						if (typeof(ingredient.getElementsByTagName("rdfs:label")[0]) != 'undefined') {
-							var tmplabel = ingredient.getElementsByTagName("rdfs:label")[0].textContent;
-							var tmptype = ingredient.getElementsByTagName("rdf:type")[0].textContent;
-							var tmpvalue = parseFloat(ingredient.getElementsByTagName("schema:value")[0].textContent);
-							var tmpingredients = ingredient.getElementsByTagName("schema:ingredients")[0].textContent;
+						if (typeof(individual.getElementsByTagName("rdfs:label")[0]) != 'undefined') {
+							var tmplabel = individual.getElementsByTagName("rdfs:label")[0].textContent;
+							var tmptype = individual.getElementsByTagName("rdf:type")[0].textContent;
+							var tmpvalue = parseFloat(individual.getElementsByTagName("schema:value")[0].textContent);
+							var tmpingredients = individual.getElementsByTagName("schema:ingredients")[0].textContent;
 							
 							
 							// "rdfs:label" als Eigenschaft und "schema:value" als Wert hinzufügen
@@ -43,10 +54,12 @@
 							obj['type'] = tmptype;
 							obj['value'] = tmpvalue;
 							obj['ingredient_FOODON'] = tmpingredients;
-						}}
-						
+						}
 						// Den aktuellen Schlüssel zum Datenobjekt hinzufügen
 						data[key] = obj;
+					// }
+					
+					
 				}
 				
 				// Parsen abgeschlossen, das Datenobjekt zurückgeben
@@ -68,12 +81,12 @@
 			
 			function displayGraph(graph) {
 				for (var resource in graph) {
-					bothLog("Resource: " + resource);
+					bothLog("<label class='toplabel'>Resource:</label><span class='toplabel'>" + resource + "</span>");
 					var properties = graph[resource];
 					for (var property in properties) {
 						var values = properties[property];
-						bothLog("Property: " + property);
-						bothLog("Values: " + values);
+						bothLog("<label>Property:</label>" + property);
+						bothLog("<label>Value:</label>" + values);
 					}
 					bothLog("---------------------------");
 				}
