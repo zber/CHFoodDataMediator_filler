@@ -46,7 +46,9 @@
 							var tmplabel = individual.getElementsByTagName("rdfs:label")[0].textContent;
 							var tmptype = individual.getElementsByTagName("rdf:type")[0].textContent;
 							var tmpvalue = parseFloat(individual.getElementsByTagName("schema:value")[0].textContent);
-							var tmpingredients = individual.getElementsByTagName("schema:ingredients")[0].textContent;
+							if (typeof(individual.getElementsByTagName("schema:ingredients")[0].attributes['rdf:resource']) != 'undefined') {
+								var tmpingredients = individual.getElementsByTagName("schema:ingredients")[0].attributes['rdf:resource'].textContent;
+							}
 							
 							
 							// "rdfs:label" als Eigenschaft und "schema:value" als Wert hinzufügen
