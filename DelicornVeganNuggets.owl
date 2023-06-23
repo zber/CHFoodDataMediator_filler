@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:dapro="http://dapro.opendata.zhaw.ch/DaPro.owl#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
+  xmlns:ns1="http://dapro.opendata.zhaw.ch/DaPro_one.owl#"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:schema="http://schema.org/"
+  xmlns:terms="http://purl.org/dc/terms/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  
+  <owl:NamedIndividual rdf:about="http://dapro.opendata.zhaw.ch/DaPro.owl#Delicorn_vegan_Nuggets">
+    <rdf:type rdf:resource="http://schema.org/Recipe"/>
+    <rdf:type rdf:resource="http://dapro.opendata.zhaw.ch/DaPro.owl#Product"/>
+    <rdfs:label>Délicorn vegan Nuggets</rdfs:label>
+    <schema:ingredients>
+      <owl:NamedIndividual rdf:about="http://dapro.opendata.zhaw.ch/DaPro.owl#Delicorn_vegan_Nuggets_043">
+        <rdf:type rdf:resource="http://dapro.opendata.zhaw.ch/DaPro.owl#ContainsIngredientPercentage"/>
+        <rdfs:label>Anteil von 100 % </rdfs:label>
+        <schema:value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</schema:value>
+        <schema:ingredients rdf:resource="http://purl.obolibrary.org/obo/FOODON_"/>
+      </owl:NamedIndividual>
+    </schema:ingredients>
+    <schema:ingredients>
+      <owl:NamedIndividual rdf:about="http://dapro.opendata.zhaw.ch/DaPro.owl#Delicorn_vegan_Nuggets_044">
+        <rdf:type rdf:resource="http://dapro.opendata.zhaw.ch/DaPro.owl#ContainsIngredientPercentage"/>
+        <rdfs:label>Anteil von 15 % Wasser</rdfs:label>
+        <schema:value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.15</schema:value>
+        <schema:ingredients rdf:resource="http://purl.obolibrary.org/obo/FOODON_00002340"/>
+      </owl:NamedIndividual>
+    </schema:ingredients>
+    <schema:ingredients>
+      <owl:NamedIndividual rdf:about="http://dapro.opendata.zhaw.ch/DaPro.owl#Delicorn_vegan_Nuggets_045">
+        <rdf:type rdf:resource="http://dapro.opendata.zhaw.ch/DaPro.owl#ContainsIngredientPercentage"/>
+        <rdfs:label>Anteil von 12 %  SOJAPROTEIN</rdfs:label>
+        <schema:value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.12</schema:value>
+        <schema:ingredients rdf:resource="http://purl.obolibrary.org/obo/FOODON_03310553"/>
+      </owl:NamedIndividual>
+    </schema:ingredients>
+    <schema:ingredients>
+      <owl:NamedIndividual rdf:about="http://dapro.opendata.zhaw.ch/DaPro.owl#Delicorn_vegan_Nuggets_046">
+        <rdf:type rdf:resource="http://dapro.opendata.zhaw.ch/DaPro.owl#ContainsIngredientPercentage"/>
+        <rdfs:label>Anteil von 12 % WEIZENPROTEIN</rdfs:label>
+        <schema:value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.12</schema:value>
+        <schema:ingredients rdf:resource="http://purl.obolibrary.org/obo/FOODON_03310809"/>
+      </owl:NamedIndividual>
+    </schema:ingredients>
+    <schema:ingredients>
+      <owl:NamedIndividual rdf:about="http://dapro.opendata.zhaw.ch/DaPro.owl#Delicorn_vegan_Nuggets_047">
+        <rdf:type rdf:resource="http://dapro.opendata.zhaw.ch/DaPro.owl#ContainsIngredientPercentage"/>
+        <rdfs:label>Anteil von 10 % Wasser</rdfs:label>
+        <schema:value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.1</schema:value>
+        <schema:ingredients rdf:resource="http://purl.obolibrary.org/obo/FOODON_00002340"/>
+      </owl:NamedIndividual>
+    </schema:ingredients>
+    <schema:ingredients>
+      <owl:NamedIndividual rdf:about="http://dapro.opendata.zhaw.ch/DaPro.owl#Delicorn_vegan_Nuggets_048">
+        <rdf:type rdf:resource="http://dapro.opendata.zhaw.ch/DaPro.owl#ContainsIngredientPercentage"/>
+        <rdfs:label>Anteil von 10 % Weizenmehl</rdfs:label>
+        <schema:value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.1</schema:value>
+        <schema:ingredients rdf:resource="http://purl.obolibrary.org/obo/FOODON_03301116"/>
+      </owl:NamedIndividual>
+    </schema:ingredients>
+    <schema:ingredients>
+      <owl:NamedIndividual rdf:about="http://dapro.opendata.zhaw.ch/DaPro.owl#Delicorn_vegan_Nuggets_049">
+        <rdf:type rdf:resource="http://dapro.opendata.zhaw.ch/DaPro.owl#ContainsIngredientPercentage"/>
+        <rdfs:label>Anteil von 2 % Kochsalz  </rdfs:label>
+        <schema:value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.02</schema:value>
+        <schema:ingredients rdf:resource="http://purl.obolibrary.org/obo/FOODON_CHEBI_26710"/>
+      </owl:NamedIndividual>
+    </schema:ingredients>
+    <schema:ingredients>
+      <owl:NamedIndividual rdf:about="http://dapro.opendata.zhaw.ch/DaPro.owl#Delicorn_vegan_Nuggets_050">
+        <rdf:type rdf:resource="http://dapro.opendata.zhaw.ch/DaPro.owl#ContainsIngredientPercentage"/>
+        <rdfs:label>Anteil von 1 % Hefe</rdfs:label>
+        <schema:value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.01</schema:value>
+        <schema:ingredients rdf:resource="http://purl.obolibrary.org/obo/FOODON_03310891"/>
+      </owl:NamedIndividual>
+    </schema:ingredients>
+    <schema:ingredients>
+      <owl:NamedIndividual rdf:about="http://dapro.opendata.zhaw.ch/DaPro.owl#Delicorn_vegan_Nuggets_051">
+        <rdf:type rdf:resource="http://dapro.opendata.zhaw.ch/DaPro.owl#ContainsIngredientPercentage"/>
+        <rdfs:label>Anteil von 1 % Gewürze</rdfs:label>
+        <schema:value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.01</schema:value>
+        <schema:ingredients rdf:resource="http://purl.obolibrary.org/obo/FOODON_03304292"/>
+      </owl:NamedIndividual>
+    </schema:ingredients>
+    <schema:ingredients>
+      <owl:NamedIndividual rdf:about="http://dapro.opendata.zhaw.ch/DaPro.owl#Delicorn_vegan_Nuggets_052">
+        <rdf:type rdf:resource="http://dapro.opendata.zhaw.ch/DaPro.owl#ContainsIngredientPercentage"/>
+        <rdfs:label>Anteil von 8 %  WEIZENMEHL</rdfs:label>
+        <schema:value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.08</schema:value>
+        <schema:ingredients rdf:resource="http://purl.obolibrary.org/obo/FOODON_03301116"/>
+      </owl:NamedIndividual>
+    </schema:ingredients>
+    <schema:ingredients>
+      <owl:NamedIndividual rdf:about="http://dapro.opendata.zhaw.ch/DaPro.owl#Delicorn_vegan_Nuggets_053">
+        <rdf:type rdf:resource="http://dapro.opendata.zhaw.ch/DaPro.owl#ContainsIngredientPercentage"/>
+        <rdfs:label>Anteil von 7 %  Sonnenblumenöl</rdfs:label>
+        <schema:value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.07</schema:value>
+        <schema:ingredients rdf:resource="http://purl.obolibrary.org/obo/FOODON_03310357"/>
+      </owl:NamedIndividual>
+    </schema:ingredients>
+    <schema:ingredients>
+      <owl:NamedIndividual rdf:about="http://dapro.opendata.zhaw.ch/DaPro.owl#Delicorn_vegan_Nuggets_054">
+        <rdf:type rdf:resource="http://dapro.opendata.zhaw.ch/DaPro.owl#ContainsIngredientPercentage"/>
+        <rdfs:label>Anteil von 5 %  Verdickungsmittel (E 461)</rdfs:label>
+        <schema:value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.05</schema:value>
+        <schema:ingredients rdf:resource="http://purl.obolibrary.org/obo/FOODON_CHEBI_30618"/>
+      </owl:NamedIndividual>
+    </schema:ingredients>
+    <schema:ingredients>
+      <owl:NamedIndividual rdf:about="http://dapro.opendata.zhaw.ch/DaPro.owl#Delicorn_vegan_Nuggets_055">
+        <rdf:type rdf:resource="http://dapro.opendata.zhaw.ch/DaPro.owl#ContainsIngredientPercentage"/>
+        <rdfs:label>Anteil von 5 %  Kartoffelstärke</rdfs:label>
+        <schema:value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.05</schema:value>
+        <schema:ingredients rdf:resource="http://purl.obolibrary.org/obo/FOODON_03307543"/>
+      </owl:NamedIndividual>
+    </schema:ingredients>
+    <schema:ingredients>
+      <owl:NamedIndividual rdf:about="http://dapro.opendata.zhaw.ch/DaPro.owl#Delicorn_vegan_Nuggets_056">
+        <rdf:type rdf:resource="http://dapro.opendata.zhaw.ch/DaPro.owl#ContainsIngredientPercentage"/>
+        <rdfs:label>Anteil von 5 %  Speiseessig</rdfs:label>
+        <schema:value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.05</schema:value>
+        <schema:ingredients rdf:resource="http://purl.obolibrary.org/obo/FOODON_03301705"/>
+      </owl:NamedIndividual>
+    </schema:ingredients>
+    <schema:ingredients>
+      <owl:NamedIndividual rdf:about="http://dapro.opendata.zhaw.ch/DaPro.owl#Delicorn_vegan_Nuggets_057">
+        <rdf:type rdf:resource="http://dapro.opendata.zhaw.ch/DaPro.owl#ContainsIngredientPercentage"/>
+        <rdfs:label>Anteil von 4 %  Gewürze</rdfs:label>
+        <schema:value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.04</schema:value>
+        <schema:ingredients rdf:resource="http://purl.obolibrary.org/obo/FOODON_03304292"/>
+      </owl:NamedIndividual>
+    </schema:ingredients>
+    <schema:ingredients>
+      <owl:NamedIndividual rdf:about="http://dapro.opendata.zhaw.ch/DaPro.owl#Delicorn_vegan_Nuggets_058">
+        <rdf:type rdf:resource="http://dapro.opendata.zhaw.ch/DaPro.owl#ContainsIngredientPercentage"/>
+        <rdfs:label>Anteil von 1 %  Gewürzzubereitung</rdfs:label>
+        <schema:value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.01</schema:value>
+        <schema:ingredients rdf:resource="http://purl.obolibrary.org/obo/FOODON_03304292"/>
+      </owl:NamedIndividual>
+    </schema:ingredients>
+    <schema:ingredients>
+      <owl:NamedIndividual rdf:about="http://dapro.opendata.zhaw.ch/DaPro.owl#Delicorn_vegan_Nuggets_059">
+        <rdf:type rdf:resource="http://dapro.opendata.zhaw.ch/DaPro.owl#ContainsIngredientPercentage"/>
+        <rdfs:label>Anteil von 1 %  Kochsalz jodiert</rdfs:label>
+        <schema:value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.01</schema:value>
+        <schema:ingredients rdf:resource="http://purl.obolibrary.org/obo/FOODON_CHEBI_26710"/>
+      </owl:NamedIndividual>
+    </schema:ingredients>
+    <schema:ingredients>
+      <owl:NamedIndividual rdf:about="http://dapro.opendata.zhaw.ch/DaPro.owl#Delicorn_vegan_Nuggets_060">
+        <rdf:type rdf:resource="http://dapro.opendata.zhaw.ch/DaPro.owl#ContainsIngredientPercentage"/>
+        <rdfs:label>Anteil von 0.5 %  Eisen</rdfs:label>
+        <schema:value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.005</schema:value>
+        <schema:ingredients rdf:resource="http://purl.obolibrary.org/obo/FOODON_CHEBI_131371"/>
+      </owl:NamedIndividual>
+    </schema:ingredients>
+    <schema:ingredients>
+      <owl:NamedIndividual rdf:about="http://dapro.opendata.zhaw.ch/DaPro.owl#Delicorn_vegan_Nuggets_061">
+        <rdf:type rdf:resource="http://dapro.opendata.zhaw.ch/DaPro.owl#ContainsIngredientPercentage"/>
+        <rdfs:label>Anteil von 0.5 %  Vitamin B12</rdfs:label>
+        <schema:value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.005</schema:value>
+        <schema:ingredients rdf:resource="http://purl.obolibrary.org/obo/FOODON_CHEBI_176843"/>
+      </owl:NamedIndividual>
+    </schema:ingredients>
+  </owl:NamedIndividual>
+  </rdf:RDF>

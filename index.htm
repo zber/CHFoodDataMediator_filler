@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>RDF/XML Parser</title>
+		<script>
+			function parseRDF(rdfXml) {
+				// Neues JavaScript-Objekt zum Speichern der Daten
+				var data = {};
+				
+				// XML-Parser erstellen
+				var parser = new DOMParser();
+				var xmlDoc = parser.parseFromString(rdfXml, "text/xml");
+				
+				// Alle "owl:NamedIndividual"-Elemente auswählen
+				var individuals = xmlDoc.getElementsByTagName("owl:NamedIndividual");
+				
+				// Durch jedes "owl:NamedIndividual"-Element iterieren
+				for (var i = 0; i < individuals.length; i++) {
+					var individual = individuals[i];
+					
+					// "rdf:about"-Attribut für den individuellen Schlüssel verwenden
+					var key = individual.getAttribute("rdf:about");
+					
+					// Neues Objekt für den aktuellen Schlüssel erstellen
+					var obj = {};
+					
+					// Alle "schema:ingredients"-Elemente auswählen
+					var ingredients = individual.getElementsByTagName("schema:ingredients");
+					
+					// Durch jedes "schema:ingredients"-Element iterieren
+					for (var j = 0; j < ingredients.length; j++) {
+						var ingredient = ingredients[j];
+						
+						// "rdfs:label" und "schema:value" auswählen
+						if (typeof(ingredient.getElementsByTagName("rdfs:label")[0]) != 'undefined') {
+							var tmplabel = ingredient.getElementsByTagName("rdfs:label")[0].textContent;
+							var tmptype = ingredient.getElementsByTagName("rdf:type")[0].textContent;
+							var tmpvalue = parseFloat(ingredient.getElementsByTagName("schema:value")[0].textContent);
+							var tmpingredients = ingredient.getElementsByTagName("schema:ingredients")[0].textContent;
+							
+							
+							// "rdfs:label" als Eigenschaft und "schema:value" als Wert hinzufügen
+							obj['label'] = tmplabel;
+							obj['type'] = tmptype;
+							obj['value'] = tmpvalue;
+							obj['ingredient_FOODON'] = tmpingredients;
+						}}
+						
+						// Den aktuellen Schlüssel zum Datenobjekt hinzufügen
+						data[key] = obj;
+				}
+				
+				// Parsen abgeschlossen, das Datenobjekt zurückgeben
+				return data;
+			}
+			
+			function handleFileSelect(event) {
+				var file = event.target.files[0];
+				var reader = new FileReader();
+				
+				reader.onload = function(e) {
+					var rdfXml = e.target.result;
+					var graph = parseRDF(rdfXml);
+					displayGraph(graph);
+				};
+				
+				reader.readAsText(file);
+			}
+			
+			function displayGraph(graph) {
+				for (var resource in graph) {
+					bothLog("Resource: " + resource);
+					var properties = graph[resource];
+					for (var property in properties) {
+						var values = properties[property];
+						bothLog("Property: " + property);
+						bothLog("Values: " + values);
+					}
+					bothLog("---------------------------");
+				}
+			}
+			
+			function bothLog(stringy) {
+				console.log(stringy);
+				outputdiv.innerHTML = outputdiv.innerHTML + stringy + '<br>';
+			}
+		</script>
+	</head>
+	<body>
+		<h1>RDF/XML Parser</h1>
+		<input type="file" id="fileInput" accept=".owl">
+		<pre id="output"></pre>
+		
+		<script>
+			var fileInput = document.getElementById('fileInput');
+			outputdiv = document.getElementById('output');
+			fileInput.addEventListener('change', handleFileSelect, false);
+		</script>
+	</body>
+</html>
