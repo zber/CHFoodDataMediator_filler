@@ -30,7 +30,6 @@
 					// Durch jedes "schema:ingredients"-Element iterieren
 					for (var j = 0; j < ingredients.length; j++) {
 						var ingredient = ingredients[j];
-						
 						// "rdfs:label" und "schema:value" auswählen
 						if (typeof(ingredient.getElementsByTagName("rdfs:label")[0]) != 'undefined') {
 							var tmplabel = ingredient.getElementsByTagName("rdfs:label")[0].textContent;
